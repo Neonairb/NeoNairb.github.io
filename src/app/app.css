@@ -1,11 +1,26 @@
+/* Import in CSS */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+/* Usage */
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Satisfy', cursive; */
+
+
 .general-container {
     text-align: center;
+    font-family: 'Dancing Script', cursive;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Great Vibes', cursive;
+  /* font-family: 'Great Vibes', cursive; */
   background: #fffbea; /* amarillo muy suave */
   color: #444;
   overflow-x: hidden;
