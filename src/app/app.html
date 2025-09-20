@@ -1,24 +1,35 @@
 <div class="general-container">
-  <header>🌼 Feliz 21 de Septiembre, mi amor 🌼</header>
+  <ng-container class="general-container" *ngIf="showGiftMessage; else impatient">
+    <header>🌼 Feliz 21 de Septiembre, mi amor 🌼</header>
 
-  <div class="photo-container">
-    <!-- 🔸 Aquí va la foto de ustedes -->
-    <img src="amor.jpg" alt="Nuestra foto">
-  </div>
+    <div class="photo-container">
+      <!-- 🔸 Aquí va la foto de ustedes -->
+      <img src="amor.jpg" alt="Nuestra foto">
+    </div>
 
-  <div class="message">Espero tambien te gusten digitales</div>
+    <div class="message">Espero tambien te gusten digitales</div>
 
-  <button class="button-surprise" (click)="showMessage()">Haz clic aquí 💛</button>
+    <button class="button-surprise" (click)="showMessage()">Haz clic aquí 💛</button>
 
-  <div *ngIf="isVisible" class="hidden-message">
-    Gracias por estar siempre a mi lado<br>
-    ¿Cumplí tus expectativas?<br>
-    Te amo mucho, mi vida. 💛
-  </div>
+    <div *ngIf="isVisible" class="hidden-message">
+      Gracias por estar siempre a mi lado<br>
+      ¿Cumplí tus expectativas?<br>
+      Te amo mucho, mi vida. 💛
+    </div>
+
+    <!-- 🔸 Flores decorativas -->
+    <img src="flor.png" class="flower top-left" alt="">
+    <img src="flor.png" class="flower top-right" alt="">
+    <img src="flor.png" class="flower bottom-left" alt="">
+    <img src="flor.png" class="flower bottom-right" alt="">
+  </ng-container>
+  <ng-template #impatient>
+    <div class="photo-container">
+      <header>
+        Impaciente
+      </header>
+      <!-- 🔸 Aquí va la foto de ustedes -->
+      <img src="bonk.webp" alt="Nuestra foto">
+    </div>
+  </ng-template>
 </div>
-
-<!-- 🔸 Flores decorativas -->
-<img src="flor.png" class="flower top-left" alt="">
-<img src="flor.png" class="flower top-right" alt="">
-<img src="flor.png" class="flower bottom-left" alt="">
-<img src="flor.png" class="flower bottom-right" alt="">
