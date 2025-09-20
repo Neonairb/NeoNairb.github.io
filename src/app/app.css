@@ -92,16 +92,6 @@ header {
   50% { transform: translateY(-10px); }
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  header {
-    font-size: 1.8rem;
-  }
-  .message {
-    font-size: 1.5rem;
-  }
-}
-
 /* Flores en las esquinas */
 .flower {
   position: absolute;
@@ -124,3 +114,28 @@ header {
 .flower.top-right { top: 15px; right: 15px; animation-delay: 1s; }
 .flower.bottom-left { bottom: 15px; left: 15px; animation-delay: 2s; }
 .flower.bottom-right { bottom: 15px; right: 15px; animation-delay: 3s; }
+
+
+@media (max-width: 600px) {
+  header {
+    font-size: 1.2rem;
+  }
+  .message {
+    font-size: 1rem;
+  }
+  .button-surprise {
+    font-size: 0.8rem;
+  }
+  .hidden-message {
+    font-size: 1rem;
+  }
+
+  .flower {
+    width: 50px; /* más pequeñas */
+  }
+
+  .flower.top-left { top: 0; left: 0; }
+  .flower.top-right { top: 0; right: 0; }
+  .flower.bottom-left { bottom: 0; left: 0; }
+  .flower.bottom-right { bottom: 0; right: 0; }
+}
