@@ -25,8 +25,6 @@ export class App {
 
     // Solo mostrar regalo si es 21 de septiembre
     this.showGiftMessage = (month === 9 && day === 21);
-
-    this.showGiftMessage = true; // Quitar para producción
   }
 
 
