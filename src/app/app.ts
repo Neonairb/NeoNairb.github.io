@@ -1,12 +1,18 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  imports: [
+    CommonModule
+  ],
+  styleUrls: ['./app.css']
 })
 export class App {
-  protected readonly title = signal('NeoNairb.github.io');
+  isVisible = false;
+
+  showMessage() {
+    this.isVisible = true;
+  }
 }

@@ -1,0 +1,111 @@
+.general-container {
+    text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Great Vibes', cursive;
+  background: #fffbea; /* amarillo muy suave */
+  color: #444;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 20px;
+  font-size: 2.2rem;
+  color: #d4a017;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.photo-container {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 350px;
+  border: 6px solid #f6d155;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  animation: float 4s ease-in-out infinite;
+}
+
+.photo-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.message {
+  margin: 20px;
+  font-size: 1.8rem;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+  animation-delay: 1s;
+}
+
+.button-surprise {
+  margin: 25px;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background-color: #ffd54f;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.button-surprise:hover {
+  transform: scale(1.05);
+}
+
+.hidden-message {
+  margin: 20px;
+  font-size: 1.6rem;
+  color: #b8860b;
+  animation: fadeIn 2s ease forwards;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header {
+    font-size: 1.8rem;
+  }
+  .message {
+    font-size: 1.5rem;
+  }
+}
+
+/* Flores en las esquinas */
+.flower {
+  position: absolute;
+  width: 80px;
+  z-index: -1;
+  opacity: 0.9;
+  animation: rotateFlower 6s linear infinite;
+}
+
+@keyframes rotateFlower {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.flower.top-left { top: 15px; left: 15px; }
+.flower.top-right { top: 15px; right: 15px; animation-delay: 1s; }
+.flower.bottom-left { bottom: 15px; left: 15px; animation-delay: 2s; }
+.flower.bottom-right { bottom: 15px; right: 15px; animation-delay: 3s; }
